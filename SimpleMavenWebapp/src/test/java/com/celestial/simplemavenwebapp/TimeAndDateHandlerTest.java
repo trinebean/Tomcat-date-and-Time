@@ -47,7 +47,7 @@ public class TimeAndDateHandlerTest
         theDate = new Date();        
         dateFormat.format(theDate);
         
-        timeFormat = new SimpleDateFormat("HH:mm:ss");
+        timeFormat = new SimpleDateFormat("HH:mm");
         theDate = new Date();        
         timeFormat.format(theDate);
     }
@@ -78,11 +78,14 @@ public class TimeAndDateHandlerTest
     {
         System.out.println("getTime");
         TimeAndDateHandler instance = new TimeAndDateHandler();
+        
+        //Uncomment to pass test...
+        //String expResult = timeFormat.format(theDate);
+        
+        // Comment out to pass test...
         String expResult = "";
         String result = instance.getTime();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }
