@@ -5,6 +5,9 @@
  */
 package com.celestial.simplemavenwebapp;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -18,6 +21,10 @@ import static org.junit.Assert.*;
  */
 public class TimeAndDateHandlerTest
 {
+    private Date    theDate;
+    private DateFormat dateFormat;
+    private Date    theTime;
+    private DateFormat timeFormat;
     
     public TimeAndDateHandlerTest()
     {
@@ -36,6 +43,13 @@ public class TimeAndDateHandlerTest
     @Before
     public void setUp()
     {
+        dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        theDate = new Date();        
+        dateFormat.format(theDate);
+        
+        timeFormat = new SimpleDateFormat("HH:mm:ss");
+        theDate = new Date();        
+        timeFormat.format(theDate);
     }
     
     @After
@@ -51,11 +65,9 @@ public class TimeAndDateHandlerTest
     {
         System.out.println("getDate");
         TimeAndDateHandler instance = new TimeAndDateHandler();
-        String expResult = "";
+        String expResult = dateFormat.format(theDate);
         String result = instance.getDate();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -69,19 +81,6 @@ public class TimeAndDateHandlerTest
         String expResult = "";
         String result = instance.getTime();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of main method, of class TimeAndDateHandler.
-     */
-    @org.junit.Test
-    public void testMain()
-    {
-        System.out.println("main");
-        String[] args = null;
-        TimeAndDateHandler.main(args);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
