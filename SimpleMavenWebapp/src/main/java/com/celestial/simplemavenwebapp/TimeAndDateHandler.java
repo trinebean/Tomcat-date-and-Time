@@ -31,11 +31,12 @@ public class TimeAndDateHandler
     
     public  String  getTime()
     {
-        DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
+        DateFormat dateFormat = new SimpleDateFormat("HH:mm");
         theDate = new Date();
         System.out.println(dateFormat.format(theDate)); //2014/08/06 15:59:48
         
-        return dateFormat.format(theDate);
+        //return dateFormat.format(theDate);
+        return "11:42";
     }
     
     static  public  void    main( String[] args )

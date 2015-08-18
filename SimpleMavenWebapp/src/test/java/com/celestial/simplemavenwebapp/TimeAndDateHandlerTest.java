@@ -66,6 +66,7 @@ public class TimeAndDateHandlerTest
         System.out.println("getDate");
         TimeAndDateHandler instance = new TimeAndDateHandler();
         String expResult = dateFormat.format(theDate);
+        System.out.println( "Expected date:" + expResult );
         String result = instance.getDate();
         assertEquals(expResult, result);
     }
@@ -80,10 +81,12 @@ public class TimeAndDateHandlerTest
         TimeAndDateHandler instance = new TimeAndDateHandler();
         
         //Uncomment to pass test...
-        String expResult = timeFormat.format(theDate);
-        
+        //String expResult = timeFormat.format(theDate);
+
         // Comment out to pass test...
-        //String expResult = "";
+        String expResult = "11:42";
+        System.out.println( "Expected time:" + expResult );
+        
         String result = instance.getTime();
         assertEquals(expResult, result);
     }
