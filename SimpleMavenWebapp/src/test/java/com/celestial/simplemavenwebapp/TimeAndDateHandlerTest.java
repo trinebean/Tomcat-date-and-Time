@@ -80,10 +80,10 @@ public class TimeAndDateHandlerTest
         TimeAndDateHandler instance = new TimeAndDateHandler();
         
         //Uncomment to pass test...
-        //String expResult = timeFormat.format(theDate);
+        String expResult = timeFormat.format(theDate);
         
         // Comment out to pass test...
-        String expResult = "";
+        //String expResult = "";
         String result = instance.getTime();
         assertEquals(expResult, result);
     }
