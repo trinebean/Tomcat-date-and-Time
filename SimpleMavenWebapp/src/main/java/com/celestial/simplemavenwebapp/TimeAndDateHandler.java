@@ -26,7 +26,7 @@ public class TimeAndDateHandler
         theDate = new Date();
         System.out.println(dateFormat.format(theDate)); //2014/08/06 15:59:48
         
-        return dateFormat.format(theDate);
+        return dateFormat.format(theDate)+"Selvyn";
     }
     
     public  String  getTime()
