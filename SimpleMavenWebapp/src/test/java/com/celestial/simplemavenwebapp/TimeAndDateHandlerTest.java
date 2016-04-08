@@ -25,33 +25,33 @@ public class TimeAndDateHandlerTest
     private DateFormat dateFormat;
     private Date    theTime;
     private DateFormat timeFormat;
-    
+
     public TimeAndDateHandlerTest()
     {
     }
-    
+
     @BeforeClass
     public static void setUpClass()
     {
     }
-    
+
     @AfterClass
     public static void tearDownClass()
     {
     }
-    
+
     @Before
     public void setUp()
     {
         dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        theDate = new Date();        
+        theDate = new Date();
         dateFormat.format(theDate);
-        
+
         timeFormat = new SimpleDateFormat("HH:mm");
-        theDate = new Date();        
+        theDate = new Date();
         timeFormat.format(theDate);
     }
-    
+
     @After
     public void tearDown()
     {
@@ -80,17 +80,18 @@ public class TimeAndDateHandlerTest
     {
         System.out.println("getTime");
         TimeAndDateHandler instance = new TimeAndDateHandler();
-        
+
         //Uncomment to pass test...
-        //String expResult = timeFormat.format(theDate);
+        String expResult = timeFormat.format(theDate);
 
         // Comment out to pass test...
-        String expResult = "11:42";
-        System.out.println( "Expected time:" + expResult );
-        
+        // String expResult = "11:42";
+
+         System.out.println( "Expected time:" + expResult );
+
         String result = instance.getTime();
         assertEquals(0, 0);
         //assertEquals(expResult, result);
     }
-    
+
 }
