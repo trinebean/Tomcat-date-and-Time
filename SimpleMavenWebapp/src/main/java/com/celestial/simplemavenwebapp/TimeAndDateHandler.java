@@ -24,9 +24,8 @@ public class TimeAndDateHandler
     {
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         theDate = new Date();
-        System.out.println(dateFormat.format(theDate)); //2014/08/06 15:59:48
-
-        return dateFormat.format(theDate);//+"Selvyn";
+        System.out.println(dateFormat.format(theDate));
+        return dateFormat.format(theDate);
     }
 
     public  String  getTime()
@@ -35,11 +34,11 @@ public class TimeAndDateHandler
         theDate = new Date();
         System.out.println(dateFormat.format(theDate)); //2014/08/06 15:59:48
 
-        //return dateFormat.format(theDate);
-        return "11:42";
+        return dateFormat.format(theDate);
+        //return "11:42";
     }
 
-    static  public  void    main( String[] args )
+    public static void main( String[] args )
     {
         TimeAndDateHandler tadh = new TimeAndDateHandler();
 
