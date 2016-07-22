@@ -17,5 +17,5 @@ node {
 
    stage 'package'
 
-   sh "${mvnHome}/bin/mvn package"
+   sh "cd SimpleMavenWebapp && ${mvnHome}/bin/mvn package"
 }
