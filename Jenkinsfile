@@ -18,4 +18,8 @@ node {
    stage 'package'
 
    sh "cd SimpleMavenWebapp && ${mvnHome}/bin/mvn package"
+
+   stage 'celebrate'
+
+   sh 'echo \'I WIN\''
 }
