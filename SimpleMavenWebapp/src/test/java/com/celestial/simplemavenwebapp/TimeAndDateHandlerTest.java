@@ -68,7 +68,7 @@ public class TimeAndDateHandlerTest
         String expResult = dateFormat.format(theDate);
         System.out.println( "Expected date:" + expResult );
         String result = instance.getDate();
-        assertEquals(0, 0);
+        assertEquals(0, 1);
         assertEquals(expResult, result);
     }
 
