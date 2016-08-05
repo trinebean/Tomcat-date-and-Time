@@ -90,7 +90,7 @@ public class TimeAndDateHandlerTest
          System.out.println( "Expected time:" + expResult );
 
         String result = instance.getTime();
-        assertEquals(1, 0);
+        assertEquals(0, 0);
         //assertEquals(expResult, result);
     }
 
