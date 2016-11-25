@@ -17,3 +17,4 @@ Runs on localhost:8080/SimpleMavenWebapp
 \n v2.0
 \n v3.0
 \n v4.0
+\n v5.0
